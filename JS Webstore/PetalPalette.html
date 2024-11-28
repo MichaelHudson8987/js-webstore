@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Petal Palette</title>
+
+    <!--Scripts-->
+    <script src="./js/color-modes.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="js/sss.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/jquery.modal.min.js"></script><!--Changed "modal" in JS to "modals" to eliminate conflict with BS modal-->
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/JSCode.js"></script>
+    <script src="js/APICode.js"></script>
+
+    <!--Style sheets-->
+    <link rel="stylesheet" href="css/jquery.modal.css">
+	  <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/sss.css" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md bg-pink mb-4">
+      <div class="container-fluid">
+        <div class="navbar-brand d-flex align-items-center">
+          <a class="nav-link" href="PetalPalette.html"><img class="logo" src="images/logo.png" alt="logo"><b><i>Petal Palette</i></b></a>
+        </div>
+        <div class="vr"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link nav-elements" aria-current="page" href="#" onclick="javascript: clickHome(); return false">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="javascript: clickAbout(); return false">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="javascript: clickContact(); return false">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Home Page-->
+    <div id="Home">
+
+      <!--Full-length slider-->
+      <h1>Discover the Beauty of Nature at <i>Petal Palette</i> - Your Premier Destination for Exquisite Bouquets!</h1>
+      <div class="slider">
+        <img src="images/flowers1.jpg" alt="flowers1">
+        <img src="images/flowers2.jpg" alt="flowers2">
+        <img src="images/flowers3.jpg" alt="flowers3">
+      </div>
+
+      <!--Products introduction-->
+      <div class="container">
+        <h1 class="bouquetHeader">Our Products</h1>
+        <p class="bouquetParagraph">Introducing our exquisite collection of floral products, where artistry meets the
+        finest blooms nature has to offer. Each piece, from our meticulously crafted bouquets to our lush potted plants
+        and welcoming wreaths, is designed to evoke emotions, tell stories, and bring joy to any occasion. Our creations
+        range from vibrant hues and delicate arrangements to the timeless elegance of green foliage, thoughtfully curated
+        to capture the essence of every season and celebration. Whether you're expressing love, gratitude, celebrating a 
+        special moment, or simply adding a touch of beauty to your space, our range of products is designed to enchant and inspire.</p>
+      </div>
+      
+      <!--Empty products div for api-->
+      <div class="container" id="Products">
+      </div>
+
+    </div>
+
+    <main class="container">
+
+      <!--About page-->
+      <div id="About">
+
+        <!--About us information-->
+        <h1>About Us</h1>
+        <br>
+        <p>Welcome to <i>Petal Palette</i>, where floral artistry meets heartfelt passion.</p>
+        <p>Established with a love for all things botanical, <i>Petal Palette</i> has been a cornerstone of beauty and elegance in our community since 2024.
+          With a commitment to excellence and a dedication to exceeding expectations, we've blossomed into a beloved destination for those seeking
+          quality blooms and unparalleled service.</p>
+                
+        <p>At <i>Petal Palette</i>, we believe that flowers are more than just decorations—they're storytellers. Each arrangement we create is infused
+          with emotion, crafted to convey sentiments ranging from love and celebration to sympathy and gratitude. Our team of experienced florists
+          combines artistic flair with a keen eye for detail, ensuring that every bouquet and centerpiece is a masterpiece of color, texture, and form.</p>
+                
+        <p>We pride ourselves on our commitment to sustainability and supporting local growers whenever possible. By sourcing our flowers responsibly, we
+          not only reduce our environmental footprint but also ensure that our creations are as fresh and vibrant as possible.</p>
+                
+        <p>But <i>Petal Palette</i> is more than just a purveyor of flowers; we're a part of life's most meaningful moments. From weddings and anniversaries to
+          birthdays and celebrations of life, we're honored to be entrusted with helping you mark life's milestones in style. As a family-owned business,
+          we understand the importance of personal connection and attentive service. When you walk through our doors or visit us online, you'll be greeted
+          with warmth, enthusiasm, and a genuine desire to make your floral dreams a reality.</p>
+                
+        <p>Thank you for choosing <i>Petal Palette</i>. We look forward to being a part of your most cherished memories for years to come.</p>
+        <br>
+
+        <!--Image of owners-->
+        <img src="images/owners.jpeg" class="owners rounded" alt="owners">
+      </div>
+
+      <!--Contact page-->
+      <div id="Contact">
+
+        <!--Contact us introduction-->
+        <h1>Contact Us</h1>
+        <p class="contactParagraph">Have a problem with your order, a question about our services, or any other concern? Contact us directly by email!</p>
+        <br><br>
+
+        <!--Contact form-->
+        <div class="row justify-content-center">
+          <form class="contactForm col-sm-10" id="form" action="javascript:verifyForm();">
+            <div class="form-group">
+              <label class="contactLabel">Email Address:</label>
+              <input type="email" class="form-control" id="emailAddressControl" placeholder="Please enter email">
+              <span class="errors" id="emailError">*this is required</span>
+            </div>
+            <br>
+            <div class="form-group">
+              <label class="contactLabel">Subject:</label>
+              <input type="text" class="form-control" id="subjectControl" placeholder="Please enter a subject">
+              <span class="errors" id="subjectError">*this is required</span>
+            </div>
+            <br>
+            <div class="form-group">
+              <label class="contactLabel">Message:</label>
+              <textarea class="form-control" id="messageControl" placeholder="Please enter a message" rows="10"></textarea>
+              <span class="errors" id="messageError">*this is required</span>
+            </div>
+            <br>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    
+    <!--Footer-->
+    <footer class="footer">
+      <div class="container">
+        <span>© 2024 <i>Petal Palette</i>. All rights reserved</span>
+      </div>
+    </footer>
+
+  </body>
+</html>
